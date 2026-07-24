@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.bg {
+    background: url("assets/paint-texture.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.overlay {
+    background: rgba(255,255,255,0.9);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.top-buttons button {
+    background: #000;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header img {
+    width: 200px;
+    border-radius: 16px;
+}
+
+#searchBar {
+    width: 90%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 999px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.scroll-box {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 10px;
+}
+
+.item {
+    min-width: 160px;
+    height: 100px;
+    background: #000;
+    border-radius: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: #fff;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.modal-thumb {
+    width: 100%;
+    height: 180px;
+    border-radius: 18px;
+    background: #000;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+.btn-play { background: #000; color: #fff; }
+.btn-trailer { background: #444; color: #fff; }
+.btn-rate { background: #ffd700; color: #000; }
+
+.login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
