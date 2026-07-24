@@ -3,20 +3,21 @@ const shortsRow = document.getElementById('shortsRow');
 const showsRow = document.getElementById('showsRow');
 const forYouRow = document.getElementById('forYouRow');
 
-// Add items
-function addItems(row, label) {
-    for (let i = 1; i <= 10; i++) {
+// Add items with thumbnails
+function addItems(row, label, thumbPrefix) {
+    for (let i = 1; i <= 6; i++) {
         const div = document.createElement('div');
         div.className = 'item';
+        div.style.backgroundImage = `url('assets/thumbnails/${thumbPrefix}-${i}.jpg')`;
         div.textContent = `${label} ${i}`;
-        div.onclick = () => openModal(`${label} ${i}`);
+        div.onclick = () => openModal(label, i, thumbPrefix);
         row.appendChild(div);
     }
 }
 
-addItems(shortsRow, 'Short');
-addItems(showsRow, 'Show');
-addItems(forYouRow, 'For You');
+addItems(shortsRow, 'Short', 'short');
+addItems(showsRow, 'Show', 'show');
+addItems(forYouRow, 'For You', 'foryou');
 
 // Content modal
 const modalBackdrop = document.getElementById('modalBackdrop');
@@ -25,8 +26,9 @@ const modalDesc = document.getElementById('modalDesc');
 const modalActions = document.getElementById('modalActions');
 const modalThumb = document.getElementById('modalThumb');
 
-function openModal(name) {
-    modalDesc.textContent = `Description for ${name}`;
+function openModal(label, number, thumbPrefix) {
+    modalDesc.textContent = `${label} ${number} — Description goes here.`;
+    modalThumb.style.backgroundImage = `url('assets/thumbnails/${thumbPrefix}-${number}.jpg')`;
     modalActions.style.display = 'none';
     modalDesc.style.display = 'block';
     modalBackdrop.style.display = 'flex';
