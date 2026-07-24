@@ -4,7 +4,7 @@ body {
 }
 
 .bg {
-    background: url("assets/paint-texture.jpg");
+    background: url("assets/backgrounds/explosion.jpeg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -12,12 +12,12 @@ body {
 }
 
 .overlay {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.88);
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     position: relative;
 }
 
@@ -30,12 +30,13 @@ body {
 }
 
 .top-buttons button {
-    background: #000;
+    background: #b00000;
     color: #fff;
     padding: 8px 14px;
     border-radius: 999px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 
 header {
@@ -63,6 +64,7 @@ h2 {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 1.4em;
+    color: #b00000;
 }
 
 .scroll-box {
@@ -75,15 +77,18 @@ h2 {
 .item {
     min-width: 160px;
     height: 100px;
-    background: #000;
+    background-size: cover;
+    background-position: center;
     border-radius: 18px;
     cursor: pointer;
     flex-shrink: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     color: #fff;
     font-size: 0.9em;
+    padding-bottom: 8px;
+    text-shadow: 0 0 5px #000;
 }
 
 .modal-backdrop {
@@ -120,7 +125,8 @@ h2 {
     width: 100%;
     height: 180px;
     border-radius: 18px;
-    background: #000;
+    background-size: cover;
+    background-position: center;
     margin-bottom: 15px;
     cursor: pointer;
 }
@@ -140,7 +146,7 @@ h2 {
     font-size: 0.95em;
 }
 
-.btn-play { background: #000; color: #fff; }
+.btn-play { background: #b00000; color: #fff; }
 .btn-trailer { background: #444; color: #fff; }
 .btn-rate { background: #ffd700; color: #000; }
 
